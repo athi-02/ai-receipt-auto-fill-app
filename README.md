@@ -132,12 +132,6 @@ http://127.0.0.1:5000
 
 ---
 
-# Screenshots
-
-(Add your project screenshots here later)
-
----
-
 # Future Improvements
 
 - Cloud database integration
