@@ -40,5 +40,11 @@
         "date": "2018-09-24",
         "total_amount": "23.25",
         "currency": "MYR"
+    },
+    {
+        "merchant_name": "Starbucks",
+        "date": "2018-09-24",
+        "total_amount": "23.25",
+        "currency": "MYR"
     }
 ]
