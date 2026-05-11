@@ -112,10 +112,6 @@ pip install -r requirements.txt
 
 Create a `.env` file in the project root:
 
-```env
-GOOGLE_API_KEY=AIzaSyCFs-CquQsxEZLyfSSNKa_6Cb90YdGWt-c
-```
-
 ---
 
 # Run the Application
