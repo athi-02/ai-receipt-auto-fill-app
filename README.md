@@ -1,23 +1,29 @@
-# AI Receipt Auto-Fill Web App
+# AI Receipt Auto-Fill App
 
-An AI-powered receipt processing web application built with Flask and Google Gemini AI.
+An AI-powered Flask web application that extracts receipt information automatically using Google Gemini AI.
 
-This application allows users to upload receipt images, automatically extract important receipt information using generative AI, review/edit the extracted data, and manage receipt history through a clean dashboard interface.
+Users can upload a receipt image, review the extracted information, edit it if needed, and save the receipt into a local history dashboard.
 
 ---
 
 # Features
 
-- Upload receipt images
-- AI-powered receipt information extraction
-- Editable auto-filled form
+- AI receipt data extraction using Gemini AI
+- Upload receipt image
+- Automatic extraction of:
+  - Merchant Name
+  - Date
+  - Total Amount
+  - Currency
+- Editable review form before submission
 - Receipt image preview
+- Dark mode / Light mode
 - Loading spinner during AI processing
-- Local JSON-based receipt storage
 - Receipt history dashboard
-- Analytics cards
-- CSV export functionality
-- Modern responsive UI using Bootstrap 5
+- Delete receipt records
+- CSV export support
+- Local JSON data storage
+- Modern responsive UI
 
 ---
 
@@ -25,22 +31,11 @@ This application allows users to upload receipt images, automatically extract im
 
 - Python
 - Flask
-- Google Gemini AI API
 - HTML5
-- Bootstrap 5
-- JSON
+- CSS3
 - JavaScript
-
----
-
-# Extracted Receipt Fields
-
-The application extracts:
-
-- Merchant Name
-- Date
-- Total Amount
-- Currency
+- Bootstrap 5
+- Google Gemini API
 
 ---
 
@@ -52,42 +47,46 @@ receipt-autofill-app/
 ├── app.py
 ├── requirements.txt
 ├── README.md
-├── .env
-├── .gitignore
 │
 ├── data/
-│   └── receipts.json
+│   ├── receipts.json
+│   └── receipts_export.csv
 │
 ├── static/
+│   ├── css/
+│   ├── js/
 │   └── uploads/
 │
-├── templates/
-│   ├── index.html
-│   ├── result.html
-│   ├── success.html
-│   └── history.html
+└── templates/
+    ├── index.html
+    ├── result.html
+    ├── success.html
+    └── history.html
 ```
 
 ---
 
-# Setup Instructions
+# Installation
 
 ## 1. Clone Repository
 
 ```bash
-git clone <your-github-repo-url>
-cd receipt-autofill-app
+git clone https://github.com/athi-02/ai-receipt-auto-fill-app.git
 ```
 
----
+## 2. Navigate into Project Folder
 
-## 2. Create Virtual Environment
+```bash
+cd ai-receipt-auto-fill-app
+```
+
+## 3. Create Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-Activate environment:
+## 4. Activate Virtual Environment
 
 ### Windows
 
@@ -101,9 +100,7 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
----
-
-## 3. Install Dependencies
+## 5. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -111,17 +108,17 @@ pip install -r requirements.txt
 
 ---
 
-## 4. Configure Environment Variables
+# Environment Variables
 
-Create a `.env` file:
+Create a `.env` file in the project root:
 
 ```env
-GEMINI_API_KEY=your_api_key_here
+GOOGLE_API_KEY=your_gemini_api_key
 ```
 
 ---
 
-## 5. Run Application
+# Run the Application
 
 ```bash
 python app.py
@@ -135,21 +132,20 @@ http://127.0.0.1:5000
 
 ---
 
-# AI Model Used
+# Screenshots
 
-- Google Gemini 2.5 Flash
-
-Prompting was used to extract structured JSON receipt information from uploaded receipt images.
+(Add your project screenshots here later)
 
 ---
 
 # Future Improvements
 
-- Database integration
+- Cloud database integration
+- OCR enhancement
 - User authentication
-- Multi-currency analytics
-- OCR confidence scoring
-- Cloud deployment
+- Receipt categorization
+- Analytics dashboard
+- Online deployment
 
 ---
 
