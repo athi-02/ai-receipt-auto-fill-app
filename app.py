@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, send_file
+from flask import Flask, render_template, request, send_file, redirect
 from dotenv import load_dotenv
 import google.generativeai as genai
 from PIL import Image
@@ -140,6 +140,24 @@ def history():
         total_spending=round(total_spending, 2),
         latest_merchant=latest_merchant
     )
+
+@app.route("/delete/<int:index>", methods=["POST"])
+def delete_receipt(index):
+
+    with open("data/receipts.json", "r") as file:
+        receipts = json.load(file)
+
+    receipts.reverse()
+
+    if 0 <= index < len(receipts):
+        receipts.pop(index)
+
+    receipts.reverse()
+
+    with open("data/receipts.json", "w") as file:
+        json.dump(receipts, file, indent=4)
+
+    return redirect("/history")
 
 @app.route('/export')
 def export():

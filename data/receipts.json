@@ -24,9 +24,21 @@
         "currency": "MYR"
     },
     {
-        "merchant_name": "99 SPEED MART SDN. BHD.",
-        "date": "2026-05-09",
-        "total_amount": "16.00",
+        "merchant_name": "Starbucks",
+        "date": "2018-09-24",
+        "total_amount": "23.25",
+        "currency": "MYR"
+    },
+    {
+        "merchant_name": "Starbucks",
+        "date": "2018-09-24",
+        "total_amount": "23.25",
+        "currency": "MYR"
+    },
+    {
+        "merchant_name": "Starbucks",
+        "date": "2018-09-24",
+        "total_amount": "23.25",
         "currency": "MYR"
     }
 ]
